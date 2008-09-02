@@ -1,0 +1,8 @@
+source ~/.vimrc
+unmap h
+unmap j
+unmap k
+unmap l
+unmap d
+unmap t
+unmap n
