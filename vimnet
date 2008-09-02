@@ -65,6 +65,10 @@ sub ip {
 	return $ip;
 }
 
+sub found_ip {
+	return defined ip;
+}
+
 sub ssh {
 	return exists $ENV{'SSH_CLIENT'};
 }
@@ -83,8 +87,8 @@ sub run {
 		join(' ', @ARGV);
 }
 
-if (grep { ip =~ /^\Q$_\E/ } @dvorak_ip || 
-		(!ssh && grep { hostname eq $_ } @dvorak_name)) {
+if ((found_ip() && grep { ip() =~ /^\Q$_\E/ } @dvorak_ip) || 
+		(!ssh() && grep { hostname() eq $_ } @dvorak_name)) {
 	dvorak();
 }
 else {
