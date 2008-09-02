@@ -1,0 +1,3 @@
+#!/bin/sh
+cd ~/.vimnet && hg pull && hg update
+
