@@ -83,7 +83,7 @@ sub qwerty {
 
 sub run {
 	my ($mode) = @_;
-	exec "/usr/bin/vim -S $ENV{'HOME'}/.vimnet/vimrc-$mode " . 
+	exec "vim.real -S $ENV{'HOME'}/.vimnet/vimrc-$mode " . 
 		join(' ', @ARGV);
 }
 
