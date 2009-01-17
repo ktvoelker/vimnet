@@ -17,8 +17,8 @@ set viminfo='20,\"500   " read/write a .viminfo file -- limit regs to 500 lines
 set history=50          " keep 50 lines of command history
 set ruler               " Show the cursor position all the time
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 " We don't allow modelines by default. See bug #14088 and bug #73715.
 " If you're not concerned about these, you can enable them on a per-user

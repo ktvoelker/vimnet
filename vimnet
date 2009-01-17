@@ -55,8 +55,7 @@ sub ip {
 			($ip) = $ENV{'SSH_CLIENT'} =~ /^(\S+)/;
 		}
 		else {
-			my $prog = _find_bin_path(`whereis host`);
-			my $cmd = "$prog '" . hostname . "'";
+			my $cmd = _find_bin_path(`whereis ifconfig`);
 			my $result = `$cmd`;
 			($ip) = $result =~ 
 				/([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})/;
