@@ -23,7 +23,7 @@ set shiftwidth=2
 " We don't allow modelines by default. See bug #14088 and bug #73715.
 " If you're not concerned about these, you can enable them on a per-user
 " basis by adding "set modeline" to your ~/.vimrc file.
-set nomodeline
+set modeline
 
 if v:lang =~ "^ko"
   set fileencodings=euc-kr
