@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+use Socket qw/inet_ntoa/;
+
 my @dvorak_ip = qw/
 	127.0.0.1
 	::1
@@ -54,13 +56,6 @@ sub ip {
 	unless (defined $ip) {
 		if (exists $ENV{'SSH_CLIENT'}) {
 			($ip) = $ENV{'SSH_CLIENT'} =~ /^(\S+)/;
-		}
-		else {
-			my $prog = _find_bin_path(`whereis host`);
-			my $cmd = "$prog '" . hostname . "'";
-			my $result = `$cmd`;
-			($ip) = $result =~ 
-				/([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})/;
 		}
 	}
 	return $ip;
