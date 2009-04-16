@@ -24,6 +24,7 @@ my @dvorak_ip = qw/
 	74.43.
 	10.0.
 	75.17.
+	129.21.253.81
 /;
 
 my @dvorak_name = qw/

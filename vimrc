@@ -66,6 +66,7 @@ endif
 " directory exists (which it won't on livecds, for example).
 if isdirectory(expand("$VIMRUNTIME/ftplugin"))
   filetype plugin on
+	filetype indent on
 endif
 
 noremap d h
