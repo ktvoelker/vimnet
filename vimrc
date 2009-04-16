@@ -80,3 +80,6 @@ noremap t k
 " set cin
 set showmode
 colorscheme delek
+
+noremap <C-h> :ta <C-R>=expand("<cword>")<CR><CR>
+
