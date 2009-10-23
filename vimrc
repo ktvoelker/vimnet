@@ -68,7 +68,7 @@ endif
 " directory exists (which it won't on livecds, for example).
 if isdirectory(expand("$VIMRUNTIME/ftplugin"))
   filetype plugin on
-	filetype indent on
+  filetype indent on
 endif
 
 noremap d h
@@ -81,7 +81,7 @@ noremap t k
 
 " set cin
 set showmode
-colorscheme delek
+" colorscheme delek
 
 noremap <C-h> :ta <C-R>=expand("<cword>")<CR><CR>
 

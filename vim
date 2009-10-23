@@ -80,8 +80,7 @@ sub qwerty {
 
 sub run {
 	my ($mode) = @_;
-	exec "vim.real -u NONE -S $ENV{'HOME'}/.vimnet/vimrc-$mode " . 
-		join(' ', @ARGV);
+	exec qw/vim.real -u NONE -S/, "$ENV{'HOME'}/.vimnet/vimrc-$mode", @ARGV;
 }
 
 if ((found_ip() && grep { ip() =~ /^\Q$_\E/ } @dvorak_ip) || 
