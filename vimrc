@@ -11,7 +11,7 @@ set nocompatible        " Use Vim defaults (much better!)
 set bs=2                " Allow backspacing over everything in insert mode
 set nohlsearch
 set novisualbell
-set ai                  " Always set auto-indenting on
+"set ai                  " Always set auto-indenting on
 "set backup             " Keep a backup file
 set viminfo='20,\"500   " read/write a .viminfo file -- limit regs to 500 lines
 set history=50          " keep 50 lines of command history
