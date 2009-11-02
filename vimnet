@@ -17,6 +17,7 @@ my @dvorak_name = qw/
 	cheese
 	raven
 	karl
+        pendulum
 /;
 
 sub _find_bin_path {
