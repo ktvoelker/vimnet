@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 use Socket qw/inet_ntoa/;
 
@@ -29,6 +29,7 @@ my @dvorak_ip = qw/
 	129.21.253.81
         24.240.34.218
         129.21.84.254
+        66.44.228.135
 /;
 
 my @dvorak_name = qw/
