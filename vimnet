@@ -10,6 +10,7 @@ my @dvorak_ip = qw/
 	75.17.
 	66.44.227.140
 	129.21.
+        24.240.34.218
 /;
 
 my @dvorak_name = qw/
@@ -73,7 +74,6 @@ sub run {
 	exec "vim.real -S $ENV{'HOME'}/.vimnet/vimrc-$mode " . 
 		join(' ', @ARGV);
 }
-
 if ((found_ip() && grep { ip() =~ /^\Q$_\E/ } @dvorak_ip) || 
 		(!ssh() && grep { hostname() eq $_ } @dvorak_name)) {
 	dvorak();
