@@ -17,7 +17,7 @@ set viminfo='20,\"500   " read/write a .viminfo file -- limit regs to 500 lines
 set history=50          " keep 50 lines of command history
 set ruler               " Show the cursor position all the time
 
-set tabstop=8
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
