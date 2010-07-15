@@ -19,8 +19,6 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
-source ~/.vimnet/dirmode.vim
-
 if v:lang =~ "^ko"
   set fileencodings=euc-kr
   set guifontset=-*-*-medium-r-normal--16-*-*-*-*-*-*-*
@@ -53,4 +51,8 @@ noremap <C-h> :ta <C-R>=expand("<cword>")<CR><CR>
 au BufRead,BufNewFile *.als setfiletype alloy4
 
 filetype detect
+
+source ~/.vimnet/dirmode.vim
+au BufRead,BufNewFile * call DirMode()
+call DirMode()
 
