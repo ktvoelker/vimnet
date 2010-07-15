@@ -1,2 +1,11 @@
+
 source ~/.vimnet/vimrc
+
+noremap d h
+noremap h j
+noremap j n
+noremap k d
+noremap l t
+noremap n l
+noremap t k
 

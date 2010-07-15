@@ -11,6 +11,7 @@ set novisualbell
 set history=50          " keep 50 lines of command history
 set ruler               " Show the cursor position all the time
 set showmode
+set autoindent
 
 set tabstop=2
 set shiftwidth=2
@@ -44,15 +45,9 @@ filetype indent on
 
 colorscheme zellner
 
-noremap d h
-noremap h j
-noremap j n
-noremap k d
-noremap l t
-noremap n l
-noremap t k
-
 noremap <C-h> :ta <C-R>=expand("<cword>")<CR><CR>
 
 au BufRead,BufNewFile *.als setfiletype alloy4
+
+filetype detect
 
