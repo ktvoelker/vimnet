@@ -12,11 +12,14 @@ set history=50          " keep 50 lines of command history
 set ruler               " Show the cursor position all the time
 set showmode
 set autoindent
+set loadplugins
 
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
+source ~/.vimnet/dirmode.vim
 
 if v:lang =~ "^ko"
   set fileencodings=euc-kr
