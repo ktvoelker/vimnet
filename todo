@@ -6,6 +6,8 @@ TODO
 dirmode.vim
 ------------
 
+Make a separate repo for dirmode.vim
+
 Use $HOME/.vim-mode-default when no .vim-mode is found in the directories above
 a file. Only load it once.
 
