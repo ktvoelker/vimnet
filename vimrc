@@ -4,28 +4,18 @@
 " Modified some more by Ciaran McCreesh <ciaranm@gentoo.org>
 " Added Redhat's vimrc info by Seemant Kulleen <seemant@gentoo.org>
 
-" The following are some sensible defaults for Vim for most users.
-" We attempt to change as little as possible from Vim's defaults,
-" deviating only where it makes sense
 set nocompatible        " Use Vim defaults (much better!)
 set bs=2                " Allow backspacing over everything in insert mode
 set nohlsearch
 set novisualbell
-"set ai                  " Always set auto-indenting on
-"set backup             " Keep a backup file
-set viminfo='20,\"500   " read/write a .viminfo file -- limit regs to 500 lines
 set history=50          " keep 50 lines of command history
 set ruler               " Show the cursor position all the time
+set showmode
 
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-
-" We don't allow modelines by default. See bug #14088 and bug #73715.
-" If you're not concerned about these, you can enable them on a per-user
-" basis by adding "set modeline" to your ~/.vimrc file.
-set modeline
 
 if v:lang =~ "^ko"
   set fileencodings=euc-kr
@@ -47,29 +37,12 @@ endif
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-endif
+syntax on
 
-if &term=="xterm"
-  " Previously we would unset t_RV to prevent gnome-terminal from beeping as
-  " vim started.  These days it appears that gnome-terminal has been repaired,
-  " so re-enable this, and don't restrict t_Co=8.  (21 Jun 2004 agriffis)
-  "set t_RV=			" don't check terminal version
-  "set t_Co=8
-  set t_Sb=^[4%dm
-  set t_Sf=^[3%dm
-  set ttymouse=xterm2	" only works for >=xfree86-3.3.3, should be okay
-endif
+filetype plugin on
+filetype indent on
 
-" Enable plugin-provided filetype settings, but only if the ftplugin
-" directory exists (which it won't on livecds, for example).
-if isdirectory(expand("$VIMRUNTIME/ftplugin"))
-  filetype plugin on
-  filetype indent on
-endif
+colorscheme zellner
 
 noremap d h
 noremap h j
@@ -78,10 +51,6 @@ noremap k d
 noremap l t
 noremap n l
 noremap t k
-
-" set cin
-set showmode
-" colorscheme delek
 
 noremap <C-h> :ta <C-R>=expand("<cword>")<CR><CR>
 
