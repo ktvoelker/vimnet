@@ -41,7 +41,7 @@ sub qwerty {
 
 sub run {
 	my ($mode) = @_;
-	exec qw/vim.real -u NONE -S/, "$ENV{'HOME'}/.vimnet/vimrc-$mode", @ARGV;
+	exec qw/vim.real -u/, "$ENV{'HOME'}/.vimnet/vimrc-$mode", @ARGV;
 }
 
 if (found_ip() && grep { ip() =~ /$_/ } @qwerty_ip) {

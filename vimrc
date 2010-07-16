@@ -50,7 +50,7 @@ noremap <C-h> :ta <C-R>=expand("<cword>")<CR><CR>
 
 au BufRead,BufNewFile *.als setfiletype alloy4
 
-filetype detect
+" filetype detect
 
 source ~/.vimnet/dirmode.vim
 
