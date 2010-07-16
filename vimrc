@@ -53,6 +53,4 @@ au BufRead,BufNewFile *.als setfiletype alloy4
 filetype detect
 
 source ~/.vimnet/dirmode.vim
-au BufRead,BufNewFile * call DirMode()
-call DirMode()
 
